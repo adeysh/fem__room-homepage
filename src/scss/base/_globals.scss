@@ -1,0 +1,32 @@
+@use "../abstracts" as a;
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    @include a.flexbox($align: center, $justify: center);
+    position: relative;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    background-color: var(--color-white);
+    height: auto;
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}

@@ -1,0 +1,27 @@
+@use "./functions" as *;
+
+// League Spartan font
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+:root {
+    // Colors
+
+    // Primary
+    --color-white: hsl(0, 100%, 100%)
+    --color-grey-500: hsl(0, 0%, 63%)
+    --color-grey-800: hsl(0, 0%, 27%)
+    --color-black: hsl(0, 0%, 0%)
+
+    // Font
+
+    // Font Family
+    --ff-primary: "League Spartan", sans-serif;
+
+    // Font size
+    --fs-body: {rem(16)};
+
+    // Font weights
+    --fw-medium: 500;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+}
