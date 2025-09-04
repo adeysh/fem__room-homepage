@@ -23,28 +23,183 @@
         </style>
     </head>
     <body>
-        Home Shop About Contact Discover innovative ways to decorate We provide unmatched quality,
-        comfort, and style for property owners across the country. Our experts combine form and
-        function in bringing your vision to life. Create a room in your own style with our
-        collection and make your property a reflection of you and what you love. Shop now We are
-        available all across the globe With stores all over the world, it's easy for you to find
-        furniture for your home or place of business. Locally, we're in most major cities throughout
-        the country. Find the branch nearest you using our store locator. Any questions? Don't
-        hesitate to contact us today. Shop now Manufactured with the best materials Our modern
-        furniture store provide a high level of quality. Our company has invested in advanced
-        technology to ensure that every product is made as perfect and as consistent as possible.
-        With three decades of experience in this industry, we understand what customers want for
-        their home and office. Shop now About our furniture Our multifunctional collection blends
-        design and function to suit your individual taste. Make each room unique, or pick a cohesive
-        theme that best express your interests and what inspires you. Find the furniture pieces you
-        need, from traditional to contemporary styles or anything in between. Product specialists
-        are available to help you create your dream space.
+        <header class="header">
+            <div class="header__container wrapper">
+                <!-- logo -->
+                <div class="header__logo">
+                    <a href="/" class="header__logo-link" title="room" aria-label="room">
+                        <img src="/assets/images/logo.svg" alt="room" class="header__logo-img" />
+                    </a>
+                </div>
 
-        <div class="attribution">
-            Challenge by
-            <a rel="noopener" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-                >Frontend Mentor</a
-            >. Coded by <a href="#">Your Name Here</a>.
+                <!-- Navigation -->
+                <nav class="header__nav nav" aria-label="Site">
+                    <button
+                        type="button"
+                        class="nav__button hide-on-desktop nav__button--open"
+                        id="nav-button-open"
+                        aria-labelledby="nav-label"
+                        aria-expanded="false"
+                    >
+                        <span id="nav-label" hidden>Navigation</span>
+
+                        <img
+                            src="/assets/images/icon-hamburger.svg"
+                            alt="Hamburger"
+                            class="nav__button-open-icon nav__button-icon"
+                            aria-hidden="true"
+                        />
+                    </button>
+
+                    <div class="nav__content" role="dialog" aria-labelledby="nav-label">
+                        <button
+                            type="button"
+                            class="nav__button hide-on-desktop nav__button--close"
+                            id="nav-button-close"
+                            aria-labelledby="nav-label"
+                            aria-expanded="false"
+                            aria-label="Close"
+                        >
+                            <img
+                                src="/assets/images/icon-close.svg"
+                                alt="Close"
+                                class="nav__button-close-icon nav__button-icon"
+                                aria-hidden="true"
+                            />
+                        </button>
+
+                        <ul class="header__nav-links flex-center-col">
+                            <li>
+                                <a href="/" class="header__nav-link btn link-underline-effect">
+                                    Home
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/" class="header__nav-link btn link-underline-effect">
+                                    Shop
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/" class="header__nav-link btn link-underline-effect">
+                                    About
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/" class="header__nav-link btn link-underline-effect">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="homepage">
+                <div class="homepage__item">
+                    <img
+                        src="/assets/images/mobile-image-hero-1.jpg"
+                        alt="chairs and a table with a plant"
+                        class="homepage__item-img"
+                    />
+                </div>
+
+                <!-- image gallery item -->
+                <div class="homepage__item">
+                    <div class="homepage__item-content">
+                        <!-- slide 1 -->
+                        <div class="homepage__item--slide-1">
+                            <h1 class="homepage__item-title">Discover innovative ways to decorate</h1>
+
+                            <p class="homepage__item-description">
+                                We provide unmatched quality, comfort, and style for property owners across
+                                the country. Our experts combine form and function in bringing your vision
+                                to life. Create a room in your own style with our collection and make your
+                                property a reflection of you and what you love.
+                            </p>       
+                        </div>
+
+                        <!-- slide 2 -->
+                        <div class="homepage__item--slide-2">
+                            <h1 class="homepage__item-title">We are available all across the globe</h1>
+
+                            <p class="homepage__item-description">
+                                With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we're in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.
+                            </p>
+                        </div>
+
+                        <!-- slide 3 -->
+                        <div class="homepage__item--slide-3">
+                            <h1 class="homepage__item-title">Manufactured with the best materials</h1>
+
+                            <p class="homepage__item-description">
+                                Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.
+                            </p>
+                        </div>
+
+                        <!-- shop now button -->
+                        <button type="button" class="homepage__item-btn">
+                            Shop now
+                            <img
+                                src="/assets/images/icon-arrow.svg"
+                                alt="right arrow"
+                                class="homepage__item-btn-icon"
+                            />
+                        </button>
+                    </div>
+                    
+                    <div class="homepage__item-btn-container">
+                        <button type="button" class="homepage__item-nav-arrow-btn">
+                            <img src="/assets/images/icon-angle-left.svg" alt="left navigation arrow button" class="homepage__item-nav-arrow-btn-icon">
+                        </button>
+
+                        <button type="button" class="homepage__item-nav-arrow-btn">
+                            <img src="/assets/images/icon-angle-right.svg" alt="right navigation arrow button" class="homepage__item-nav-arrow-btn-icon">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="homepage__item">
+                    <img
+                        src="/assets/images/mobile-image-hero-2.jpg"
+                        alt="dark room with chairs and a table with a white pot"
+                        class="homepage__item-img"
+                    />
+                </div>
+
+                <div class="homepage__item">
+                    <h2 class="homepage__item-subtitle">About our furniture</h2>
+
+                    <p class="homepage__item-description">
+                        Our multifunctional collection blends design and function to suit your
+                        individual taste. Make each room unique, or pick a cohesive theme that best
+                        express your interests and what inspires you. Find the furniture pieces you
+                        need, from traditional to contemporary styles or anything in between.
+                        Product specialists are available to help you create your dream space.
+                    </p>
+                </div>
+
+                <div class="homepage__item">
+                    <img
+                        src="/assets/images/mobile-image-hero-3.jpg"
+                        alt="a white chair kept in front of sunlight in a room"
+                        class="homepage__item-img"
+                    />
+                </div>
+            </div>
+        </main>
+        
+        <footer class="attribution">
+                Challenge by
+                <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener"
+                    >Frontend Mentor</a
+                >. Coded by
+                <a href="https://www.frontendmentor.io/profile/adeysh">Adesh Katiya </a>.
+            </footer>
         </div>
     </body>
 </html>
