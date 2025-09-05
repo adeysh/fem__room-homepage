@@ -35,6 +35,37 @@
             @include a.flexbox($direction: row, $gap: a.rem(20));
             list-style-type: none;
 
+            .hover-underline-animation {
+                display: inline-block;
+                position: relative;
+            }
+
+            .hover-underline-animation::after {
+                content: "";
+                position: absolute;
+                width: 50%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: -15%;
+                left: 50%;
+                transform-origin: center;
+                transform: translateX(-50%) scaleX(0);
+                background-color: var(--color-white);
+                transition: transform 0.25s ease-out;
+            }
+
+            .hover-underline-animation:hover::after {
+                transform: translateX(-50%) scaleX(1);
+            }
+
+            .hover-underline-animation.center::after {
+                transform-origin: bottom center;
+            }
+
+            .hover-underline-animation.center:hover::after {
+                transform-origin: bottom center;
+            }
+
             @include a.bp($from: "desktop") {
                 @include a.flexbox($direction: row, $align: center, $gap: a.rem(40));
             }
