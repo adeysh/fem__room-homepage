@@ -7,10 +7,10 @@
     // Colors
 
     // Primary
-    --color-white: hsl(0, 100%, 100%)
-    --color-grey-500: hsl(0, 0%, 63%)
-    --color-grey-800: hsl(0, 0%, 27%)
-    --color-black: hsl(0, 0%, 0%)
+    --color-white: hsl(0, 100%, 100%);
+    --color-grey-500: hsl(0, 0%, 63%);
+    --color-grey-800: hsl(0, 0%, 27%);
+    --color-black: hsl(0, 0%, 0%);
 
     // Font
 
@@ -18,7 +18,8 @@
     --ff-primary: "League Spartan", sans-serif;
 
     // Font size
-    --fs-body: {rem(16)};
+    --fs-body: clamp(0.9rem, 0.7576rem + 0.303vw, 1rem);
+    --fs-h1: clamp(1.875rem, 1.7045rem + 0.6818vw, 2.25rem);
 
     // Font weights
     --fw-medium: 500;

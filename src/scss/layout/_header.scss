@@ -1,5 +1,64 @@
 @use "../abstracts" as a;
 
 .header {
-    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding-block: a.rem(32);
+
+    &__container {
+        @include a.flexbox($direction: row-reverse, $align: center, $justify: center);
+        position: relative;
+
+        @include a.bp($from: "desktop") {
+            @include a.flexbox($direction: row, $align: center, $gap: a.rem(64));
+        }
+    }
+
+    &__logo {
+        &-img {
+            width: clamp(3.875rem, 3.875rem + 0vw, 3.875rem);
+        }
+    }
+
+    &__nav {
+        @include a.flexbox($align: center);
+        position: absolute;
+        left: 0;
+
+        @include a.bp($from: "desktop") {
+            position: unset;
+        }
+
+        &-links {
+            @include a.flexbox($direction: row, $gap: a.rem(20));
+            list-style-type: none;
+
+            @include a.bp($from: "desktop") {
+                @include a.flexbox($direction: row, $align: center, $gap: a.rem(40));
+            }
+        }
+
+        &-link {
+            text-transform: lowercase;
+            text-decoration: none;
+            font-size: var(--fs-body);
+            font-weight: var(--fw-bold);
+            color: var(--color-black);
+
+            @include a.bp($from: "desktop") {
+                color: var(--color-white);
+
+                &:hover {
+                    color: var(--color-grey-800);
+                    transition: color 0.5s ease;
+                }
+            }
+        }
+    }
+
+    @include a.bp($from: "desktop") {
+        padding-block: a.rem(60);
+    }
 }

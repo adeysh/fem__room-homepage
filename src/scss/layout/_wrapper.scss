@@ -1,6 +1,10 @@
 @use "../abstracts" as a;
 
 .wrapper {
-    width: min(a.rem(1200), 100% - a.rem(40));
+    width: min(a.rem(1300), 100% - a.rem(40));
     margin-inline: auto;
+
+    @include a.bp($from: "desktop") {
+        width: min(a.rem(1300), 100% - a.rem(100));
+    }
 }

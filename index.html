@@ -22,6 +22,7 @@
             }
         </style>
     </head>
+    
     <body>
         <header class="header">
             <div class="header__container wrapper">
@@ -50,6 +51,8 @@
                             aria-hidden="true"
                         />
                     </button>
+
+                    <div class="nav__overlay" aria-hidden="true"></div>
 
                     <div class="nav__content" role="dialog" aria-labelledby="nav-label">
                         <button
@@ -100,19 +103,33 @@
 
         <main class="main">
             <div class="homepage">
-                <div class="homepage__item">
-                    <img
-                        src="/assets/images/mobile-image-hero-1.jpg"
-                        alt="chairs and a table with a plant"
-                        class="homepage__item-img"
-                    />
+                <!-- image gallery item -->
+                <div class="homepage__item homepage__item--gallery">
+                    <picture class="homepage__item-img">
+                        <source media="(min-width: 600px)" srcset="/assets/images/desktop-image-hero-1.jpg">
+                        <img
+                            src="/assets/images/mobile-image-hero-1.jpg"
+                            alt="chairs and a table with a plant"
+                            
+                        />
+                    </picture>
+
+                    <div class="homepage__item-nav-btn-container">
+                        <button type="button" class="homepage__item-nav-arrow-btn homepage__item-nav-arrow-btn--left" title="Go to previous slide">
+                            <svg fill="currentColor" class="homepage__item-nav-arrow-btn-icon" width="14" height="24" alt="left navigation arrow button" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="currentColor" fill="currentColor" fill-rule="evenodd"/></svg>
+                        </button>
+
+                        <button type="button" class="homepage__item-nav-arrow-btn homepage__item-nav-arrow-btn--right" title="Go to next slide">
+                            <svg fill="currentColor" class="homepage__item-nav-arrow-btn-icon" width="14" height="24" alt="right navigation arrow button" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="currentColor" fill="currentColor" fill-rule="evenodd"/></svg>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- image gallery item -->
-                <div class="homepage__item">
+                <div class="homepage__item  wrapper homepage__item--gallery-content">
                     <div class="homepage__item-content">
                         <!-- slide 1 -->
-                        <div class="homepage__item--slide-1">
+                        <div class="homepage__item-slide homepage__item--slide-1">
                             <h1 class="homepage__item-title">Discover innovative ways to decorate</h1>
 
                             <p class="homepage__item-description">
@@ -124,7 +141,7 @@
                         </div>
 
                         <!-- slide 2 -->
-                        <div class="homepage__item--slide-2">
+                        <div class="homepage__item-slide homepage__item--slide-2">
                             <h1 class="homepage__item-title">We are available all across the globe</h1>
 
                             <p class="homepage__item-description">
@@ -133,7 +150,7 @@
                         </div>
 
                         <!-- slide 3 -->
-                        <div class="homepage__item--slide-3">
+                        <div class="homepage__item-slide homepage__item--slide-3">
                             <h1 class="homepage__item-title">Manufactured with the best materials</h1>
 
                             <p class="homepage__item-description">
@@ -142,36 +159,25 @@
                         </div>
 
                         <!-- shop now button -->
-                        <button type="button" class="homepage__item-btn">
+                        <button type="button" class="homepage__item-btn" title="Shop Now">
                             Shop now
-                            <img
-                                src="/assets/images/icon-arrow.svg"
-                                alt="right arrow"
-                                class="homepage__item-btn-icon"
-                            />
-                        </button>
-                    </div>
-                    
-                    <div class="homepage__item-btn-container">
-                        <button type="button" class="homepage__item-nav-arrow-btn">
-                            <img src="/assets/images/icon-angle-left.svg" alt="left navigation arrow button" class="homepage__item-nav-arrow-btn-icon">
-                        </button>
-
-                        <button type="button" class="homepage__item-nav-arrow-btn">
-                            <img src="/assets/images/icon-angle-right.svg" alt="right navigation arrow button" class="homepage__item-nav-arrow-btn-icon">
+        
+                            <svg class="homepage__item-btn-icon" width="40" height="12" alt="right arrow" xmlns="http://www.w3.org/2000/svg"><path d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z" fill="var(--color-black)" fill-rule="nonzero"/></svg>
                         </button>
                     </div>
                 </div>
 
-                <div class="homepage__item">
-                    <img
-                        src="/assets/images/mobile-image-hero-2.jpg"
-                        alt="dark room with chairs and a table with a white pot"
-                        class="homepage__item-img"
-                    />
+                <div class="homepage__item homepage__item--about-dark">
+                    <picture class="homepage__item-img">
+                        <source media="(min-width: 600px)" srcset="/assets/images/image-about-dark.jpg">
+                        <img
+                            src="/assets/images/mobile-image-hero-4.jpg"
+                            alt="dark room with chairs and a table with a white pot"      
+                        />
+                    </picture>
                 </div>
 
-                <div class="homepage__item">
+                <div class="homepage__item wrapper homepage__item--about">
                     <h2 class="homepage__item-subtitle">About our furniture</h2>
 
                     <p class="homepage__item-description">
@@ -183,12 +189,14 @@
                     </p>
                 </div>
 
-                <div class="homepage__item">
-                    <img
-                        src="/assets/images/mobile-image-hero-3.jpg"
-                        alt="a white chair kept in front of sunlight in a room"
-                        class="homepage__item-img"
-                    />
+                <div class="homepage__item homepage__item--about-light">
+                    <picture class="homepage__item-img">
+                        <source media="(min-width: 600px)" srcset="/assets/images/image-about-light.jpg">
+                        <img
+                            src="/assets/images/mobile-image-hero-5.jpg"
+                            alt="a white chair kept in front of sunlight in a room"      
+                        />
+                    </picture>
                 </div>
             </div>
         </main>
