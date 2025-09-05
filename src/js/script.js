@@ -75,8 +75,6 @@ rightArrowBtn.addEventListener("click", () => {
     updateSlide(current);
 });
 
-updateSlide(current);
-
 // nav
 
 const body = document.querySelector("body");
