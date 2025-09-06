@@ -91,6 +91,7 @@
                 color: var(--color-grey-500);
             }
 
+            // bounce right animation
             @keyframes bounce-right {
                 0% {
                     transform: translateX(0);
@@ -172,11 +173,6 @@
     }
 
     @include a.bp($from: "desktop") {
-        // display: grid;
-        // grid-template-columns: 1fr;
-        // grid-template-rows: auto;
-        // gap: a.rem(60);
-
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: auto;
